@@ -15,12 +15,22 @@ dependencies = [
     "motor (>=3.7.1,<4.0.0)",
     "pytest (>=8.4.1,<9.0.0)",
     "pytest-asyncio (>=1.1.0,<2.0.0)",
-    "pre-commit (>=4.3.0,<5.0.0)"
+    "pre-commit (>=4.3.0,<5.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
 ]
 
 [tool.poetry]
 packages = [{include = "tdd_project_dio", from = "src"}]
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+  "--ignore=docs_src",
+]
+xfail_strict = true
+junit_family = "xunit2"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

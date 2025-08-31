@@ -9,5 +9,5 @@ services:
         environment:
             - MONGODB_REPLICA_SET_MODE=primary
             - MONGODB_REPLICA_SET_NAME=rs0
-            - MONGODB_ADVERTISED_HOSTNAME = localhost
-            - ALLOW_EMPTY_PASSWORD = yes
+            - MONGODB_ADVERTISED_HOSTNAME=localhost
+            - ALLOW_EMPTY_PASSWORD=yes
